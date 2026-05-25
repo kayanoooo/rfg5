@@ -1,0 +1,256 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>AdminWindow</class>
+ <widget class="QMainWindow" name="AdminWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1300</width>
+    <height>820</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Пиццерия — Администратор</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <layout class="QVBoxLayout" name="verticalLayoutMain">
+    <item>
+     <layout class="QHBoxLayout" name="horizontalLayoutTop">
+      <item>
+       <widget class="QLabel" name="labelWindowTitle">
+        <property name="text">
+         <string>Панель администратора</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <spacer name="sp1">
+        <property name="orientation">
+         <enum>Qt::Orientation::Horizontal</enum>
+        </property>
+        <property name="sizeHint" stdset="0">
+         <size>
+          <width>0</width>
+          <height>0</height>
+         </size>
+        </property>
+       </spacer>
+      </item>
+      <item>
+       <widget class="QLabel" name="labelCurrentUser">
+        <property name="text">
+         <string>Администратор</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QPushButton" name="pushButtonLogout">
+        <property name="text">
+         <string>Выйти</string>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </item>
+    <item>
+     <widget class="QTabWidget" name="tabWidgetMain">
+      <property name="currentIndex">
+       <number>1</number>
+      </property>
+      <widget class="QWidget" name="tabUsers">
+       <attribute name="title">
+        <string>Пользователи</string>
+       </attribute>
+       <layout class="QVBoxLayout" name="verticalLayoutUsers">
+        <item>
+         <layout class="QHBoxLayout" name="horizontalLayoutUsersButtons">
+          <item>
+           <widget class="QPushButton" name="pushButtonAddUser">
+            <property name="text">
+             <string>Добавить</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QPushButton" name="pushButtonEditUser">
+            <property name="text">
+             <string>Редактировать</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QPushButton" name="pushButtonDeleteUser">
+            <property name="text">
+             <string>Удалить</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <spacer name="sp2">
+            <property name="orientation">
+             <enum>Qt::Orientation::Horizontal</enum>
+            </property>
+            <property name="sizeHint" stdset="0">
+             <size>
+              <width>0</width>
+              <height>0</height>
+             </size>
+            </property>
+           </spacer>
+          </item>
+         </layout>
+        </item>
+        <item>
+         <widget class="QTableWidget" name="tableWidgetUsers"/>
+        </item>
+       </layout>
+      </widget>
+      <widget class="QWidget" name="tabMenu">
+       <attribute name="title">
+        <string>Товары</string>
+       </attribute>
+       <layout class="QVBoxLayout" name="verticalLayoutMenu">
+        <item>
+         <layout class="QHBoxLayout" name="horizontalLayoutMenuButtons">
+          <item>
+           <widget class="QPushButton" name="pushButtonAddPizza">
+            <property name="text">
+             <string>Добавить</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QPushButton" name="pushButtonDeletePizza">
+            <property name="text">
+             <string>Удалить</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QLineEdit" name="lineEdit_search"/>
+          </item>
+          <item>
+           <spacer name="sp3">
+            <property name="orientation">
+             <enum>Qt::Orientation::Horizontal</enum>
+            </property>
+            <property name="sizeHint" stdset="0">
+             <size>
+              <width>0</width>
+              <height>0</height>
+             </size>
+            </property>
+           </spacer>
+          </item>
+         </layout>
+        </item>
+        <item>
+         <widget class="QScrollArea" name="scrollAreaMenu">
+          <property name="widgetResizable">
+           <bool>true</bool>
+          </property>
+          <widget class="QWidget" name="scrollAreaWidgetContentsMenu">
+           <property name="geometry">
+            <rect>
+             <x>0</x>
+             <y>0</y>
+             <width>1266</width>
+             <height>612</height>
+            </rect>
+           </property>
+          </widget>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+      <widget class="QWidget" name="tabOrders">
+       <attribute name="title">
+        <string>Заказы</string>
+       </attribute>
+       <layout class="QVBoxLayout" name="verticalLayoutOrders">
+        <item>
+         <layout class="QHBoxLayout" name="horizontalLayoutOrderStatus">
+          <item>
+           <widget class="QLabel" name="labelSelectedOrder">
+            <property name="text">
+             <string>Новый статус:</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QComboBox" name="comboBoxNewStatus"/>
+          </item>
+          <item>
+           <widget class="QPushButton" name="pushButtonUpdateStatus">
+            <property name="text">
+             <string>Применить статус</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <spacer name="horizontalSpacer">
+            <property name="orientation">
+             <enum>Qt::Orientation::Horizontal</enum>
+            </property>
+            <property name="sizeHint" stdset="0">
+             <size>
+              <width>40</width>
+              <height>20</height>
+             </size>
+            </property>
+           </spacer>
+          </item>
+         </layout>
+        </item>
+        <item>
+         <widget class="QTableWidget" name="tableWidget"/>
+        </item>
+       </layout>
+      </widget>
+      <widget class="QWidget" name="tabRoles">
+       <attribute name="title">
+        <string>Роли</string>
+       </attribute>
+       <layout class="QVBoxLayout" name="verticalLayoutRoles">
+        <item>
+         <layout class="QHBoxLayout" name="horizontalLayoutRolesButtons">
+          <item>
+           <spacer name="sp5">
+            <property name="orientation">
+             <enum>Qt::Orientation::Horizontal</enum>
+            </property>
+            <property name="sizeHint" stdset="0">
+             <size>
+              <width>0</width>
+              <height>0</height>
+             </size>
+            </property>
+           </spacer>
+          </item>
+         </layout>
+        </item>
+        <item>
+         <widget class="QTableWidget" name="tableWidgetRoles"/>
+        </item>
+       </layout>
+      </widget>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>1300</width>
+     <height>30</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
